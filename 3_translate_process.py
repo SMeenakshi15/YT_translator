@@ -33,6 +33,13 @@
 
 # Import necessary libraries
 import googletrans  # For language translation
+import sys
+
+# Source and destination languages as command-line arguments
+source_language = sys.argv[1]
+destination_language = sys.argv[2]
+
+# Rest of your code remains the same
 
 # Create a Translator object from the googletrans library
 translator = googletrans.Translator()
@@ -43,7 +50,7 @@ with open("transcript_file.txt", "r", encoding="utf-8") as f:
     transcript_text = f.read()
 
 # Translate the transcript to the destination language ('hi' for Hindi in this case)
-translated = translator.translate(transcript_text, dest='hi')
+translated = translator.translate(transcript_text, src=source_language, dest=destination_language)
 
 # Get the translated text from the translation object
 translated_text = translated.text

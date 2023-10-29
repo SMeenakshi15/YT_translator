@@ -14,6 +14,7 @@ source_language = st.text_input("Enter the source language (e.g., en for English
 # Input for destination language
 destination_language = st.text_input("Enter the destination language (e.g., hi for Hindi):")
 
+
 # Define a temporary folder to store intermediate files
 temp_folder = "temp_folder"
 
@@ -68,3 +69,7 @@ if audio_file_path:
 
     # Provide a download link for the audio
     st.markdown(f'<a href="{audio_file_path}" download="translated_audio.mp3">Download Audio</a>', unsafe_allow_html=True)
+
+
+
+        
